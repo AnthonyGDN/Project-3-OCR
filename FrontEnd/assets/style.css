@@ -99,6 +99,29 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+.buttonsFilter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+	height: 100px;
+}
+.buttonsFilter button {
+	background-color: #fefef8;
+	padding: 9px 20px;
+	border: 1px solid #1d6154;
+	border-radius: 25px;
+	color: #1d6154;
+	font-weight: 700;
+	font-size: 20px;
+	font-family: Syne;
+	cursor: pointer;
+}
+
+.buttonsFilter button:focus {
+	background-color: #1d6154;
+	color: white;
+}
 .gallery {
 	width: 100%;
 	display: grid;

@@ -20,9 +20,48 @@
 					<li><a href="#contact">contact</a></li>
 					<li><a href="./login.html" class="logout">login</a></li>
 					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+					<li><a href="#" class="admin"></a></li>
 				</ul>
 			</nav>
 		</header>
+		<div class="modalsContainer">
+			<section class="galleryModal">
+				<span><i class="fa-solid fa-xmark"></i></span>
+				<h2>Galerie photo</h2>
+				<div class="containerGalleryButonModal">
+					<div class="containerGalleryModal"></div>
+					<div class="containerButtonModal">
+						<button class="buttonModalN1">Ajouter une photo</button>
+					</div>
+				</div>
+			</section>
+			<section class="addWorksModal">
+				<span class="arrow-left"><i class="fa-solid fa-arrow-left"></i></span>
+				<span class="xmark"><i class="fa-solid fa-xmark"></i></span>
+				<h2>Ajouter une photo</h2>
+				<form id="addNewWorkModal">
+					<div class="containerFileModal">
+						<i class="fa-regular fa-image"></i>
+						<label for="file" class="labelFileModal)">+ Ajouter une photo</label>
+						<p>jpg, png : 4mo max</p>
+						<input type="file" name="image" id="file" accept="image/jpeg, image/png" required>
+						<img id="imagePreviewModal" src="#" alt="Aperçu de l'image">
+					</div>
+					<label for="titleModal">Titre</label>
+					<input type="text" name="titleModal" id="titleModal" required>
+					<label for="categoryInputModal">Catégorie</label>
+					<select id="categoryInputModal" name="categoryModal" required>
+						<option value="" disabled selected hidden>Sélectionnez une catégorie</option>
+						<option value="1">Objets</option>
+						<option value="2">Appartements</option>
+						<option value="3">Hôtels & retaurants</option>
+					</select>
+					<div class="buttonAddWorksModal">
+						<button type="submit" id="submitButtonModal" class="buttonModalN2 buttonModalN2-active">Valider</button>
+					</div>
+				</form>
+			</section>
+		</div>
 		<main>
 			<section id="introduction">
 				<figure>

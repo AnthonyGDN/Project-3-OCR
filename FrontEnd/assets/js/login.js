@@ -15,13 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
             email: userEmail,
             password: userPassword,
         };
-        const user = JSON.stringify(login);
         fetch("http://localhost:5678/api/users/login", {
             method: "POST", 
-            mode: "cors", 
-            credentials: "same-origin", 
             headers: { "Content-Type": "application/json" }, 
-            body: user, 
+            body: JSON.stringify(login), 
         })
         .then((response) => {
             if (!response.ok) {
@@ -33,11 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then((data) => {
             const { userId, token: userToken } = data;
-            window.sessionStorage.setItem("token", userToken, "userId", userId);
-            window.sessionStorage.setItem("loged", "true"); 
-            window.location.href = "../index.html";
+            window.localStorage.setItem("token", userToken, "userId", userId);
+            window.location.href = "./index.html";
     })
     .catch((error) => {
         console.error("An error occurred while retrieving data.", error);
     });
-})});
+});
+});

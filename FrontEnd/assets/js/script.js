@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const containerModals = document.querySelector(".modalsContainer");
     const closeModals = document.querySelector(".modalsContainer .fa-xmark");
     const projectModal = document.querySelector(".containerGalleryModal");
+    const galleryModal = document.querySelector(".galleryModal")
     const modalAddWork = document.querySelector(".addWorksModal");
     const btnAddWorkModal = document.querySelector(".galleryModal button");
     const arrowleft = document.querySelector(".addWorksModal .fa-arrow-left");
@@ -163,22 +164,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
             if (!response.ok) throw new Error('Error while deleting');
-            displayWorks(); // Mettre à jour la galerie
+            displayWorks(); 
         } catch (error) {
             console.error(error);
         }
     }
     function displayAddWorkModal() {
         btnAddWorkModal.addEventListener("click", () => {
-            modalAddWork.style.display = "flex";
+            modalAddWork.style.display = "flex";  
+            containerModals.style.display = "flex"; 
             projectModal.style.display = "none";
+            galleryModal.style.display = "none";   
         });
         arrowleft.addEventListener("click", () => {
-            modalAddWork.style.display = "none";
-            projectModal.style.display = "flex";
+            modalAddWork.style.display = "none";    
+            projectModal.style.display = "flex";    
         });
         markAdd.addEventListener("click", () => {
-            containerModals.style.display = "none";
+            containerModals.style.display = "none"; 
+            modalAddWork.style.display = "none";    
+            projectModal.style.display = "none";    
         });
     }
     const previewImg = document.querySelector(".containerFileModal img");

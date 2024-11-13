@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="preconnect" href="https://fontawesome.com/">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 		<meta name="description" content="">
 		<link rel="stylesheet" href="./assets/style.css">
@@ -26,7 +28,7 @@
 		</header>
 		<div class="modalsContainer">
 			<section class="galleryModal">
-				<span><i class="fa-solid fa-xmark"></i></span>
+				<span><i class="fa-solid fa-x"></i></span>
 				<h2>Galerie photo</h2>
 				<div class="containerGalleryButonModal">
 					<div class="containerGalleryModal"></div>
@@ -37,8 +39,8 @@
 			</section>
 			<section class="addWorksModal">
 				<span class="arrow-left"><i class="fa-solid fa-arrow-left"></i></span>
-				<span class="xmark"><i class="fa-solid fa-xmark"></i></span>
-				<h2>Ajouter une photo</h2>
+				<span id="closeModalButton" class="xmark"><i class="fa-solid fa-x"></i></span>
+				<h2>Ajout photo</h2>
 				<form id="addNewWorkModal">
 					<div class="containerFileModal">
 						<i class="fa-regular fa-image"></i>

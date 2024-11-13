@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
             const { userId, token: userToken } = data;
             window.localStorage.setItem("token", userToken);
-            window.localStorage.setItem("userId", userId); 
             window.location.href = "./index.html";
         })
         .catch((error) => {

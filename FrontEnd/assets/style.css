@@ -82,6 +82,9 @@ li:hover {
 .admin-mod p {
 	color: white;
 }
+.admin-mod .fa-regular {
+	margin-right: 10px;
+}
 /*-------- MAIN --------*/
 main {
     margin: 0px 0px 0px 20%;
@@ -132,7 +135,10 @@ main {
 	font-family: Syne;
 	cursor: pointer;
 }
-
+.ButtonsCatFilters button.active {
+    background-color: #1d6154; 
+    color: white; 
+}
 .ButtonsCatFilters button:focus {
 	background-color: #1d6154;
 	color: white;
@@ -141,11 +147,11 @@ main {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
 	grid-row-gap: 20px;
 }
 .gallery img {
-	width: 100%;
+	height: 413px;
+	width: 310px;
 
 }
 #portfolio .div-edit {
@@ -174,56 +180,40 @@ main {
 	align-items: center; 
 }
 .galleryModal {
-	display: none;
-	background-color: white;
-	width: 40%;
-	height: auto; 
-	border-radius: 0.75rem;
 	display: flex;
 	flex-direction: column;
-	position: relative;
-	padding-bottom: 10px; 
+	width: 33%;
+    border-radius: 10px;
+	background-color: white;
 }
-.fa-xmark {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-size: 21px;
-	cursor: pointer;
+.fa-x {
+    margin-top: 1.5%;
+    position: absolute;
+    margin-left: 31%;
+    font-size: 21px;
+    cursor: pointer;
 }
 /*-------- MODALS EDITION --------*/
 .containerGalleryModal {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
-    justify-content: center; 
-    align-content: center; 
-    grid-column-gap: 5px; 
-    grid-row-gap: 20px; 
-    padding: 10px;
-    box-sizing: border-box;
-}
-.containerGalleryModal {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: repeat(3, 1fr); 
-    justify-content: center;
-    align-content: center; 
-    gap: 5px; 
-    padding: 10px;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	margin-left: 10%;
 }
 .galleryModal h2 {
-	margin-top: 10px;
-	margin-bottom: 32px;
-    font-weight: bold;
-    font-size: 24px;
+    font-family: Work Sans;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30.5px;
+    text-align: center;
+	margin-bottom: 5%;
+    margin-top: 8%;
+	color:black;
 }
 .containerGalleryModal figure {
-    width: 80px; 
-    height: 100px;
+	margin: 5px;
+    width: 76.86px;; 
+    height: 102.57px;
     background-color: #f0f0f0;
     display: flex;
     justify-content: center;
@@ -246,18 +236,30 @@ main {
     width: 18px;
     cursor: pointer;
 }
+.containerGalleryModal .fa-square {
+    position: absolute;
+	margin-bottom: 4%;
+    margin-left: 2.5%;
+	color: black;
+    font-size: 17px;
+	cursor: pointer;
+}
 .containerGalleryModal .fa-trash-can {
+    position: absolute;
+	margin-bottom: 4%;
+    margin-left: 2.5%;
 	color: white;
-    font-size: 11px;
+    font-size: 10px;
+	cursor: pointer;
 }
 .containerButtonModal {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 60px;
-	width: 100%;
+	width: 450px;
 	border-top: 1px solid gray;
-	margin-top: 10px; 
+	margin: 50px 0px 20px 90px;
 }
 .containerButtonModal button {
 	background-color: #1d6154;
@@ -277,15 +279,14 @@ main {
 }
 /*-------- MODAL 2 - ADD WORKS --------*/
 .addWorksModal {
-	background-color: white;
-	width: 40%;
-	height: 70%;
-	border-radius: 0.75rem;
-	display: none;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
 	position: relative;
+	width: 630px;
+	height: 670px;
+	border-radius: 10px;
+	background-color: white;
+	flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 .addWorksModal .arrow-left .fa-arrow-left {
 	position: absolute;
@@ -294,7 +295,7 @@ main {
 	font-size: 21px;
     cursor: pointer;
 }
-.addWorksModal .xmark .fa-xmark {
+.addWorksModal .xmark .fa-x {
 	position: absolute;
 	top: 1.25rem;
 	right: 1.25rem;
@@ -302,9 +303,12 @@ main {
 	cursor: pointer;
 }
 .addWorksModal h2 {
-	margin-top: 10px;
-    font-weight: bold;
-    font-size: 24px;
+	font-family: Work Sans;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 30.5px;
+	text-align: center;
+	color: black;	
 }
 .addWorksModal form {
 	display: flex;
@@ -369,6 +373,7 @@ main {
     height: 100px;
     width: 100%;
     border-top: 1px solid gray;
+	margin: 30px 0px 0px 0px;
 }
 .buttonAddWorksModal .buttonModalN2 {
 	background-color: #a7a7a7;
